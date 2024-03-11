@@ -5,8 +5,10 @@
 {% block body %}
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aliquid debitis, quis itaque minima doloremque delectus commodi eligendi eaque, ut facere voluptates explicabo aut sunt ab at dolores nostrum suscipit eius vero. </p>
     <ul>
+        {% for recipe in recipes %}
         <li>
-            <a href="{{ path('recipe.show', {id: 32, slug: 'pate-bolognaise'}) }}">Pâtes bolognaises</a>
+            <a href="{{ path('recipe.show', {id: recipe.id, slug: recipe.slug}) }}">{{ recipe.title }}</a>
         </li>
+        {% endfor %}
     </ul>
 {% endblock %}
