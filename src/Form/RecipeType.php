@@ -37,7 +37,7 @@ class RecipeType extends AbstractType
             ->addEventListener(FormEvents::POST_SUBMIT, $this->attachTimestamps(...))
         ;
     }
-
+    
     public function autoSlug(PreSubmitEvent $event): void
     {
         $data = $event->getData();
