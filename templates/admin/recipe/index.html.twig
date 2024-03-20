@@ -4,12 +4,12 @@
 
 {% block body %}
     <p>
-        <a class="btn btn-primary btn-sm" href="{{ path('admin.recipe.create') }}" role="button">Ajouter une recette</a>
+        <a class="btn btn-primary btn-sm" href="{{ path('admin.recipe.create') }}" role="button">Ajouter une catégorie</a>
     </p>
     <table class="table">
         <thead>
             <th>Titre</th>
-            <th>Actions</th>
+            <th style="width: 200px">Actions</th>
         </thead>
         <tbody>
         {% for recipe in recipes %}
