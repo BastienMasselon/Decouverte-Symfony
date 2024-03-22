@@ -4,11 +4,12 @@
 
 {% block body %}
     <p>
-        <a class="btn btn-primary btn-sm" href="{{ path('admin.recipe.create') }}" role="button">Ajouter une catégorie</a>
+        <a class="btn btn-primary btn-sm" href="{{ path('admin.recipe.create') }}" role="button">Ajouter une recette</a>
     </p>
     <table class="table">
         <thead>
             <th>Titre</th>
+            <th>Catégorie</th>
             <th style="width: 200px">Actions</th>
         </thead>
         <tbody>
@@ -16,6 +17,9 @@
         <tr>
             <td>
                 <a href="{{ path('admin.recipe.edit', {id: recipe.id}) }}">{{ recipe.title }}</a>
+            </td>
+            <td>
+                <a>{{ recipe.category.name |default('') }}</a>
             </td>
             <td>
                 <div class="d-flex gap-1">

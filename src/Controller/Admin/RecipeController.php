@@ -19,7 +19,6 @@ class RecipeController extends AbstractController
     public function index(RecipeRepository $repository): Response
     {
         $recipes = $repository->findWithDurationLowerThan(20);
-
         return $this->render('admin/recipe/index.html.twig', [
             'recipes' => $recipes
         ]);
